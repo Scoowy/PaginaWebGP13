@@ -1,0 +1,41 @@
+.contenido-1 {
+	padding: 100px;
+	text-align: left;
+	padding-top: 13%;
+}
+
+.contenido-1 .author-image img {
+	margin-top: 15px;
+	border-radius: 30px;
+	max-width: 100%;
+	overflow: hidden;
+	float: left;
+	margin-right: 35px;
+}
+
+.contenido-1 h2 {
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 0.5px;
+	border-bottom: 2px solid #fff;
+	display: inline-block;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	margin-top: 0px;
+}
+
+.contenido-1 p {
+	color: #fff;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 2px;
+	line-height: 26px;
+	margin-bottom: 20px;
+}
+
+.contenido-1 em {
+	font-style: normal;
+	font-weight: 600;
+}
