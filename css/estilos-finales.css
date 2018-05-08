@@ -16,7 +16,6 @@
 .contenido-1 h2 {
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #fff;
 	letter-spacing: 0.5px;
 	border-bottom: 2px solid #fff;
 	display: inline-block;
@@ -26,9 +25,8 @@
 }
 
 .contenido-1 p {
-	color: #fff;
-	font-size: 13px;
-	text-transform: uppercase;
+	/* font-size: 13px; */
+	/* text-transform: uppercase; */
 	font-weight: 300;
 	letter-spacing: 2px;
 	line-height: 26px;
@@ -38,4 +36,108 @@
 .contenido-1 em {
 	font-style: normal;
 	font-weight: 600;
+}
+
+.contenido-2 .contenedor-fluido {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.contenido-2 .fila,
+.contenido-2 .fila-inver {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	height: 100%;
+	max-height: 100%;
+}
+
+.contenido-2 .fila {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.contenido-2 .fila-inver {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-ms-flex-flow: row-reverse wrap;
+	flex-flow: row-reverse wrap;
+}
+
+.contenido-2 .fila .descripcion,
+.contenido-2 .fila .img-desc,
+.contenido-2 .fila-inver .descripcion,
+.contenido-2 .fila-inver .img-desc {
+	height: auto;
+	max-height: 50rem;
+	max-width: 50%;
+	overflow: hidden;
+}
+
+.contenido-2 .fila h2,
+.contenido-2 .fila-inver h2 {
+	line-height: 1em;
+}
+
+.contenido-2 .fila .descripcion,
+.contenido-2 .fila-inver .descripcion {
+	padding: 5em 5em;
+	text-align: left;
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 26px;
+}
+
+.contenido-3 h2 {
+	margin-top: 5rem;
+}
+
+.contenido-3 .contenedor-fluido {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-pack: space-evenly;
+	-ms-flex-pack: space-evenly;
+	justify-content: space-evenly;
+}
+
+.contenido-3 .titulo-seccion,
+.contenido-3 .contenido-seccion {
+	width: 100%;
+}
+
+.contenido-seccion {
+	margin-bottom: 5rem;
+}
+
+.contenido-3 .col-galeria {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+	width: 33%;
+	max-width: 33%;
+}
+
+.contenido-3 .col-galeria img {
+	border: 3px #fff solid;
+	margin: 3px 0px;
+	cursor: pointer;
+}
+
+.contenido-4 #map {
+	width: 90%;
+	margin-top: 2rem;
 }
