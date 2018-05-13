@@ -90,9 +90,22 @@
 		margin-right: 0px;
 		margin-bottom: 15px;
 	}
-	.contenido-2 .contenido-izq {
-		padding: 30px;
-		text-align: left;
+	.contenido-2 .fila,
+	.contendio-2 .fila-inver {
+		margin-top: 2.5rem;
+		margin-bottom: 2.5rem;
+	}
+	.contenido-2 .fila .descripcion,
+	.contenido-2 .fila .img-desc,
+	.contenido-2 .fila-inver .descripcion,
+	.contenido-2 .fila-inver .img-desc {
+		height: auto;
+		max-height: 35rem;
+		max-width: 100%;
+		overflow: hidden;
+	}
+	.contenido-2 .contenido-seccion {
+		margin-bottom: 1rem;
 	}
 	.contenido-3 .col-galeria {
 		width: 99%;

@@ -137,7 +137,13 @@
 	cursor: pointer;
 }
 
+.contenido-4 {
+	padding-top: 5rem;
+}
+
 .contenido-4 #map {
 	width: 90%;
 	margin-top: 2rem;
+	margin-left: auto;
+	margin-right: auto;
 }
