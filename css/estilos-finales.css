@@ -134,7 +134,7 @@
 .contenido-3 .col-galeria img {
 	border: 3px #fff solid;
 	margin: 3px 0px;
-	cursor: pointer;
+	/* cursor: pointer; */
 }
 
 .contenido-4 {
