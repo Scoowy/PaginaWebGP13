@@ -38,60 +38,46 @@
 $(document).ready(function () {
 
     function showSlide(n) {
-        // n is relative position from current slide
-
-        // unbind event listener to prevent retriggering
+        // n es la posicion relatva de la diapo
         $body.unbind("mousewheel");
 
-        // increment slide number by n and keep within boundaries
+        // Augmenta el numero de diapos por n manteniendolo dentro de los limites
         currSlide = Math.min(Math.max(0, currSlide + n), $slide.length - 1);
 
         var displacment = window.innerWidth * currSlide;
-        // translate slides div across to appropriate slide
+        // Mueve la diapo a la posicion actual
         $slides.css('transform', 'translateX(-' + displacment + 'px)');
-        // delay before rebinding event to prevent retriggering
+        // Un delay para volver a clickear
         setTimeout(bind, 700);
 
-        // change active class on link
+        // Cambia la clase activa
         $('nav a.active').removeClass('active');
         $($('a')[currSlide]).addClass('active');
 
     }
 
-    function bind() {
-        $body.bind('false', mouseEvent);
-    }
-
-    function mouseEvent(e, delta) {
-        // On down scroll, show next slide otherwise show prev slide
-        showSlide(delta >= 0 ? -1 : 1);
-        e.preventDefault();
-    }
-
     $('nav a, .main-btn a').click(function (e) {
-        // When link clicked, find slide it points to
+        // Cuando clikea en el enlace, encuantra la diapo a la que dirige
         var newslide = parseInt($(this).attr('href')[1]);
-        // find how far it is from current slide
+        // Retorna la posicion de la diapo actual
         var diff = newslide - currSlide - 1;
-        showSlide(diff); // show that slide
+        showSlide(diff); // Mostrar la diapo
         e.preventDefault();
     });
 
     $(window).resize(function () {
-        // Keep current slide to left of window on resize
+        // Mantener la ventana a la izquierda caundo se redimensiona
         var displacment = window.innerWidth * currSlide;
         $slides.css('transform', 'translateX(-' + displacment + 'px)');
     });
 
-    // cache
+    // Cache
     var $body = $('body');
     var currSlide = 0;
     var $slides = $('.capas');
     var $slide = $('.capa');
 
-    // give active class to first link
+    // Obtner el primer link como calse activa
     $($('nav a')[0]).addClass('active');
 
-    // add event listener for mousescroll
-    $body.bind('false', mouseEvent);
 });
