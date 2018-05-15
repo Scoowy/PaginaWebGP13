@@ -56,6 +56,10 @@ $(document).ready(function () {
 
     }
 
+    function bind() {
+        $body.bind('false', mouseEvent);
+     }
+
     $('nav a, .main-btn a').click(function (e) {
         // Cuando clikea en el enlace, encuantra la diapo a la que dirige
         var newslide = parseInt($(this).attr('href')[1]);
