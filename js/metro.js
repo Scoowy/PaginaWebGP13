@@ -84,4 +84,7 @@ $(document).ready(function () {
     // Obtner el primer link como calse activa
     $($('nav a')[0]).addClass('active');
 
+    // agregar evento de escucha al bosdy
+    $body.bind('false', mouseEvent);     
+
 });
